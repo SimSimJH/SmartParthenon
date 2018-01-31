@@ -26,21 +26,20 @@ public class Parthenon : MonoBehaviour {
             DestroyImmediate(t.gameObject);
         }
 
-        var newGameObject1 = Instantiate(cubePrefab);
+        var newGameObject1 = Instantiate(cubePrefab, transform);
         var floor1 = newGameObject1.GetComponent<Transform>();
         floor1.position= new Vector3(0, 0, 0);
         floor1.localScale = new Vector3(width, height, depth);
 
-        var newGameObject2 = Instantiate(cubePrefab);
+        var newGameObject2 = Instantiate(cubePrefab, transform);
         var floor2 = newGameObject2.GetComponent<Transform>();
         floor2.position = new Vector3(0, height, 0);
         floor2.localScale = new Vector3(width*0.9f, height, depth*0.9f);
 
-        var newGameObject3 = Instantiate(cubePrefab);
+        var newGameObject3 = Instantiate(cubePrefab, transform);
         var floor3 = newGameObject3.GetComponent<Transform>();
         floor3.position = new Vector3(0, height*2, 0);
         floor3.localScale = new Vector3(width * 0.81f, height, depth * 0.81f);
-
 
     }
 
